@@ -1,0 +1,31 @@
+﻿</html><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" 
+  "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
+  <h2>IDE Racket<br>Мова Scheme</h2>
+  <body>
+<p><big>Завдання 1.</big></p>
+<pre>
+(define (sum-of-digits x)
+  (if (= x 0);если число закончилось возвращаем сумму 
+      0
+      (+ (modulo x 10)
+         (sum-of-digits (quotient x 10)))));иначе берем следующую цифру и суммируем
+
+(sum-of-digits (read));ввести число после запуска
+
+</pre>
+<p><big>Завдання 2.</big></p>
+<pre>
+(define (myfun mon proc per)
+  (if (= per 0);если период заканчивается возвращаем деньги
+      mon
+      (myfun (+ mon (/ (* mon proc) 100)) 1.25 (- per 1))));иначе считаем деньги за следующий период
+
+(myfun 1000 1.25 12);mon-деньги proc-проценты per-период
+
+</pre>
+  </body>
+
+</html>
